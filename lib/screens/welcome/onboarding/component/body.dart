@@ -24,7 +24,7 @@ class BodyOnboardingScreen extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(height: dimensions.getScreenHeight * 0.05),
+          SizedBox(height: dimensions.getScreenHeight * 0.02),
           Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -63,7 +63,7 @@ class BodyOnboardingScreen extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: dimensions.getScreenHeight * 0.1,
+            height: dimensions.getScreenHeight * 0.05,
           ),
           Container(
             padding: EdgeInsets.all(dimensions.getScreenWidth * 0.02),

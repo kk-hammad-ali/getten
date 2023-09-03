@@ -140,7 +140,7 @@ class _OTPTextFeildsState extends State<OTPTextFeilds> {
             ),
           ],
         ),
-        SizedBox(height: dimensions.getScreenHeight * 0.18),
+        SizedBox(height: dimensions.getScreenHeight * 0.1),
         CustomLongButtonWidget(
           height: dimensions.getScreenHeight * 0.065,
           text: 'Verify',

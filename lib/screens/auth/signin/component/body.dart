@@ -25,7 +25,6 @@ class BodySignInScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(height: dimensions.getScreenHeight * 0.05),
               Center(
                 child: SvgPicture.asset(AppImages.logoSVG),
               ),

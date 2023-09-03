@@ -22,7 +22,7 @@ class BodyResetPasswordScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(height: dimensions.getScreenHeight * 0.02),
+              SizedBox(height: dimensions.getScreenHeight * 0.01),
               IconButton(
                 onPressed: () {
                   if (Navigator.canPop(context)) {

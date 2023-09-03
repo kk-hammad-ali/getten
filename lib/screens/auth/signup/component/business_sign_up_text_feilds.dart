@@ -179,8 +179,6 @@ class _BusinessTextFeildsState extends State<BusinessTextFeilds> {
           child: Center(
             child: GestureDetector(
                 onTap: () {},
-
-                // TODO : CHANGE THE ICON HERE
                 child: SvgPicture.asset(
                   AppImages.uploadSVG,
                 )),

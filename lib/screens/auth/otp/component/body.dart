@@ -22,7 +22,7 @@ class BodyForgetOTPScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(height: dimensions.getScreenHeight * 0.02),
+              SizedBox(height: dimensions.getScreenHeight * 0.01),
               IconButton(
                 onPressed: () {
                   if (Navigator.canPop(context)) {
@@ -33,7 +33,7 @@ class BodyForgetOTPScreen extends StatelessWidget {
                   Icons.arrow_back_ios_new_sharp,
                 ),
               ),
-              SizedBox(height: dimensions.getScreenHeight * 0.05),
+              SizedBox(height: dimensions.getScreenHeight * 0.06),
               Center(child: SvgPicture.asset(AppImages.otpSVG)),
               SizedBox(height: dimensions.getScreenHeight * 0.05),
               const HeadingsForget(
