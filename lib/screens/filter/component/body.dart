@@ -25,9 +25,9 @@ class BodyFilterScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             mainAxisSize: MainAxisSize.min,
             children: [
-              SizedBox(height: dimensions.getScreenHeight * 0.02),
+              SizedBox(height: dimensions.getScreenHeight * 0.01),
               Container(
-                height: dimensions.getScreenHeight * 0.8,
+                height: dimensions.getScreenHeight * 0.85,
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(
                   horizontal: dimensions.getScreenWidth * 0.025,

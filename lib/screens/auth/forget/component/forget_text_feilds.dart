@@ -39,7 +39,7 @@ class _ForgetTextFeilsState extends State<ForgetTextFeils> {
           inputAction: TextInputAction.next,
           controller: _emailController,
         ),
-        SizedBox(height: dimensions.getScreenHeight * 0.25),
+        SizedBox(height: dimensions.getScreenHeight * 0.2),
         CustomLongButtonWidget(
           height: dimensions.getScreenHeight * 0.065,
           text: 'Send',

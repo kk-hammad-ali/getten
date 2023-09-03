@@ -24,7 +24,7 @@ class BodyConfrimScreen extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisSize: MainAxisSize.max,
             children: [
-              SvgPicture.asset(AppImages.forgetSVG),
+              SvgPicture.asset(AppImages.confrimSVG),
               SizedBox(height: dimensions.getScreenHeight * 0.05),
               Text(
                 'Password Reset Successfully',

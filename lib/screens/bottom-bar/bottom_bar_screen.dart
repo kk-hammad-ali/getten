@@ -31,17 +31,13 @@ class _NavigatorScreenState extends State<NavigatorScreen> {
         ],
       ),
       bottomNavigationBar: DotNavigationBar(
+        enableFloatingNavBar: true,
         currentIndex: _selectedIndex,
-        dotIndicatorColor: Colors.white,
+        dotIndicatorColor: AppColors.whiteColor,
+        backgroundColor: AppColors.whiteColor,
         unselectedItemColor: AppColors.greyScale500Color,
         splashBorderRadius: dimensions.getScreenWidth * 0.1,
-        marginR: EdgeInsets.symmetric(
-            horizontal: dimensions.getScreenWidth * 0.05,
-            vertical: dimensions.getScreenWidth * 0.05),
-        paddingR: EdgeInsets.symmetric(
-          horizontal: dimensions.getScreenWidth * 0.05,
-          vertical: dimensions.getScreenWidth * 0.02,
-        ),
+        margin: EdgeInsets.zero,
         onTap: (value) {
           _selectedIndex = value;
           setState(() {});

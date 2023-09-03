@@ -61,7 +61,7 @@ class ReviewCard extends StatelessWidget {
                 fontSize: dimensions.getScreenWidth * 0.03,
               ),
             ),
-            SizedBox(height: dimensions.getScreenHeight * 0.02),
+            SizedBox(height: dimensions.getScreenHeight * 0.01),
             Divider(
               color: AppColors.blackColor,
               thickness: dimensions.getScreenWidth * 0.002,

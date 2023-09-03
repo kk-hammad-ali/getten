@@ -64,7 +64,8 @@ class BodyHomeScreen extends StatelessWidget {
             SizedBox(height: dimensions.getScreenHeight * 0.02),
             const PopularCategorySection(),
             SizedBox(height: dimensions.getScreenHeight * 0.01),
-            const OtherCategorySection()
+            const OtherCategorySection(),
+            SizedBox(height: dimensions.getScreenHeight * 0.02),
           ],
         ),
       ),

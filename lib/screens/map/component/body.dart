@@ -23,17 +23,9 @@ class _BodyMapScreen extends State<BodyMapScreen> {
 
   LatLng _lastMapPosition = _center;
 
-  MapType _currentMapType = MapType.normal;
+  MapType currentMapType = MapType.normal;
 
-  void _onMapTypeButtonPressed() {
-    setState(() {
-      _currentMapType = _currentMapType == MapType.normal
-          ? MapType.satellite
-          : MapType.normal;
-    });
-  }
-
-  void _onAddMarkerButtonPressed() {
+  void onAddMarkerButtonPressed() {
     setState(() {
       _markers.add(Marker(
         markerId: MarkerId(_lastMapPosition.toString()),
@@ -59,7 +51,7 @@ class _BodyMapScreen extends State<BodyMapScreen> {
   Widget build(BuildContext context) {
     AppDimensions dimensions = AppDimensions(context);
     return Stack(
-      alignment: Alignment.center,
+      alignment: Alignment.bottomCenter,
       children: [
         GoogleMap(
           onMapCreated: _onMapCreated,
@@ -67,12 +59,12 @@ class _BodyMapScreen extends State<BodyMapScreen> {
             target: _center,
             zoom: 11.0,
           ),
-          mapType: _currentMapType,
+          mapType: currentMapType,
           markers: _markers,
           onCameraMove: _onCameraMove,
         ),
         Positioned(
-          bottom: dimensions.getScreenHeight * 0.05,
+          bottom: dimensions.getScreenHeight * 0.02,
           child: SizedBox(
             width: dimensions.getScreenWidth * 0.8,
             child: CustomLongButtonWidget(

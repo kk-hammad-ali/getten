@@ -57,7 +57,7 @@ class _ResetTextFeilsState extends State<ResetTextFeils> {
             return null;
           },
         ),
-        SizedBox(height: dimensions.getScreenHeight * 0.12),
+        SizedBox(height: dimensions.getScreenHeight * 0.1),
         CustomLongButtonWidget(
           height: dimensions.getScreenHeight * 0.065,
           text: 'Reset Password',
