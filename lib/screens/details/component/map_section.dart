@@ -7,7 +7,7 @@ class MapSection extends StatefulWidget {
   const MapSection({super.key});
 
   @override
-  _MapSectionState createState() => _MapSectionState();
+  State<MapSection> createState() => _MapSectionState();
 }
 
 class _MapSectionState extends State<MapSection> {
