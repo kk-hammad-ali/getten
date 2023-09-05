@@ -1,18 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/responsive/dimension.dart';
 
-class CircleIconContainer extends StatelessWidget {
-  const CircleIconContainer({
+class CustomCircleIconContainer extends StatelessWidget {
+  const CustomCircleIconContainer({
     super.key,
     required this.text,
     required this.icon,
     this.onPressed,
+    required this.iconBGColor,
+    required this.textColor,
+    required this.iconColor,
   });
 
   final String text;
   final IconData icon;
   final void Function()? onPressed;
+  final Color iconBGColor;
+  final Color textColor;
+  final Color iconColor;
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +33,7 @@ class CircleIconContainer extends StatelessWidget {
             height: dimensions.getScreenHeight * 0.06,
             width: dimensions.getScreenHeight * 0.06,
             decoration: BoxDecoration(
-              color: AppColors.disabledColor.withOpacity(0.5),
+              color: iconBGColor,
               borderRadius: BorderRadius.circular(
                 dimensions.getScreenHeight * 0.15,
               ),
@@ -36,7 +41,7 @@ class CircleIconContainer extends StatelessWidget {
             child: Icon(
               icon,
               size: dimensions.getScreenHeight * 0.03,
-              color: AppColors.whiteColor,
+              color: iconColor,
             ),
           ),
           SizedBox(height: dimensions.getScreenHeight * 0.01),
@@ -44,7 +49,7 @@ class CircleIconContainer extends StatelessWidget {
             text,
             style: TextStyle(
               fontSize: dimensions.getScreenHeight * 0.015,
-              color: AppColors.whiteColor,
+              color: textColor,
             ),
           )
         ],
