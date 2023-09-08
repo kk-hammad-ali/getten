@@ -16,6 +16,9 @@ class BodySettingScreen extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.center,
           mainAxisSize: MainAxisSize.min,
           children: [
+            SizedBox(
+              height: dimensions.getScreenHeight * 0.03,
+            ),
             Container(
               height: dimensions.getScreenHeight * 0.052 * settings.length,
               padding: EdgeInsets.symmetric(

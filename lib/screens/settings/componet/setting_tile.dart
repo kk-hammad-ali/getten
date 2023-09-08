@@ -30,7 +30,7 @@ class SettingTile extends StatelessWidget {
               text,
               style: TextStyle(
                 fontSize: dimensions.getScreenWidth * 0.045,
-                fontWeight: FontWeight.bold,
+                fontWeight: FontWeight.w500,
                 color: AppColors.greyScale800Color,
               ),
             ),
@@ -44,37 +44,58 @@ class SettingTile extends StatelessWidget {
 final settings = [
   {
     'text': 'Add Review',
-    'icon': const Icon(Icons.star_border),
+    'icon': const Icon(
+      Icons.star_border,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Add Photo or Video',
-    'icon': const Icon(Icons.image),
+    'icon': const Icon(
+      Icons.image,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Check In',
-    'icon': const Icon(Icons.check),
+    'icon': const Icon(
+      Icons.check,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Message',
-    'icon': const Icon(Icons.message),
+    'icon': const Icon(
+      Icons.message,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Notification',
-    'icon': const Icon(Icons.notifications),
+    'icon': const Icon(
+      Icons.notifications,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Activity Feed',
-    'icon': const Icon(Icons.monitor_heart_outlined),
+    'icon': const Icon(
+      Icons.monitor_heart_outlined,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Recently Viewed',
-    'icon': const Icon(Icons.alarm),
+    'icon': const Icon(
+      Icons.alarm,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
 ];
@@ -82,12 +103,18 @@ final settings = [
 final businessSettings = [
   {
     'text': 'Add a Business',
-    'icon': const Icon(Icons.business),
+    'icon': const Icon(
+      Icons.business,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Explore Getten for Business',
-    'icon': const Icon(Icons.data_exploration_rounded),
+    'icon': const Icon(
+      Icons.data_exploration_rounded,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
 ];
@@ -95,22 +122,34 @@ final businessSettings = [
 final communitySettings = [
   {
     'text': 'Yelp Elite Squad',
-    'icon': const Icon(Icons.business),
+    'icon': const Icon(
+      Icons.business,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Friends Check In',
-    'icon': const Icon(Icons.check),
+    'icon': const Icon(
+      Icons.check,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Talk',
-    'icon': const Icon(Icons.chat),
+    'icon': const Icon(
+      Icons.chat,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
   {
     'text': 'Event',
-    'icon': const Icon(Icons.event),
+    'icon': const Icon(
+      Icons.event,
+      color: AppColors.primaryColor,
+    ),
     'onPressed': () {},
   },
 ];

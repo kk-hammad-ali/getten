@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getten/screens/bottom-bar/bottom_bar_screen.dart';
+import 'package:getten/screens/navigator/navigator_screen.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/responsive/dimension.dart';
 import 'package:getten/widget/custom_long_button_widget.dart';
@@ -57,7 +57,7 @@ class _SigninTextFeilsState extends State<SigninTextFeils> {
             Navigator.push(
               context,
               MaterialPageRoute(
-                builder: ((context) => const NavigatorScreen()),
+                builder: ((context) => NavigatorScreen()),
               ),
             );
           },

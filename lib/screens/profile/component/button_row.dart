@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:getten/screens/subscription-plan/plan_supscription_screen.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/responsive/dimension.dart';
 import 'package:getten/widget/custom_circle_container.dart';
@@ -31,9 +32,16 @@ class ButtonRow extends StatelessWidget {
             textColor: AppColors.blackColor,
           ),
           CustomCircleIconContainer(
-            onPressed: () {},
-            icon: Icons.check,
-            text: 'Check- In',
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: ((context) => const PlanSubcriptionScreen()),
+                ),
+              );
+            },
+            icon: Icons.payment,
+            text: 'Subscription',
             iconBGColor: AppColors.disabledColor.withOpacity(0.6),
             iconColor: AppColors.blackColor,
             textColor: AppColors.blackColor,

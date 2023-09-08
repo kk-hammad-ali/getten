@@ -12,6 +12,7 @@ class ResturantScreen extends StatelessWidget {
       backgroundColor: AppColors.primaryBGColor,
       appBar: CustomAppBar(
         text: 'Resturant',
+        isLeading: true,
       ),
       body: BodyResturantScreen(),
     );
