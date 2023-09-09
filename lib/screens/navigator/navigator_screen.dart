@@ -75,7 +75,7 @@ class NavigatorScreen extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Icon(
                   Icons.bookmark,
-                  color: navigationController.selectedIndex == 2
+                  color: navigationController.selectedIndex == 3
                       ? AppColors.primaryColor
                       : AppColors.greyScale900Color,
                 ),
@@ -84,7 +84,7 @@ class NavigatorScreen extends StatelessWidget {
               BottomNavigationBarItem(
                 icon: Icon(
                   Icons.menu,
-                  color: navigationController.selectedIndex == 2
+                  color: navigationController.selectedIndex == 4
                       ? AppColors.primaryColor
                       : AppColors.greyScale900Color,
                 ),

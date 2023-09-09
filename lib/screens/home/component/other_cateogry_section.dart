@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:getten/screens/details/details_screen.dart';
 import 'package:getten/screens/home/component/row_heading.dart';
 import 'package:getten/screens/other-category/other_category_screen.dart';
+import 'package:getten/screens/resturant/resturant_screen.dart';
 import 'package:getten/utils/models/category/data.dart';
 import 'package:getten/utils/responsive/dimension.dart';
 import 'package:getten/widget/custom_category_card.dart';
@@ -45,7 +45,7 @@ class OtherCategorySection extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: ((context) => const DetailsScreen()),
+                      builder: ((context) => const ResturantScreen()),
                     ),
                   );
                 },
