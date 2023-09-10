@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:getten/screens/navigator/navigator_screen.dart';
-import 'package:getten/screens/subscription-plan/component/package_details_row.dart';
-import 'package:getten/screens/subscription-plan/component/plan_container.dart';
+import 'package:getten/screens/plan-subscription/component/package_details_row.dart';
+import 'package:getten/screens/plan-subscription/component/plan_container.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/responsive/dimension.dart';
 import 'package:getten/widget/custom_selection_container.dart';

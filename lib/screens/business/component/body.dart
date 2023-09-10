@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:getten/screens/filter/filter_screen.dart';
-import 'package:getten/screens/resturant/component/resutrant_card.dart';
+import 'package:get/get.dart';
+import 'package:getten/screens/business/component/business_card.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/responsive/dimension.dart';
+import 'package:getten/utils/routes/routes_name.dart';
 
 class BodyResturantScreen extends StatelessWidget {
   const BodyResturantScreen({super.key});
@@ -58,12 +59,7 @@ class BodyResturantScreen extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: ((context) => const FilterScreen()),
-                        ),
-                      );
+                      Get.toNamed(RoutesName.filtersScreen);
                     },
                     child: Container(
                       padding: EdgeInsets.symmetric(
@@ -93,7 +89,7 @@ class BodyResturantScreen extends StatelessWidget {
                 child: ListView.builder(
                   itemCount: 4,
                   physics: const BouncingScrollPhysics(),
-                  itemBuilder: ((context, index) => const ResturantCard()),
+                  itemBuilder: ((context, index) => const BusinessCard()),
                 ),
               ),
             ],

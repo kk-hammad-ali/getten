@@ -61,7 +61,7 @@ class UserExpereinceCard extends StatelessWidget {
                 Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
-                  mainAxisSize: MainAxisSize.min,
+                  // mainAxisSize: MainAxisSize.min,
                   children: [
                     SizedBox(
                       child: Text(
@@ -86,7 +86,7 @@ class UserExpereinceCard extends StatelessWidget {
                     ),
                     SizedBox(height: dimensions.getScreenHeight * 0.02),
                     Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         SizedBox(
                           width: dimensions.getScreenWidth * 0.16,
@@ -119,7 +119,7 @@ class UserExpereinceCard extends StatelessWidget {
                         ),
                         SizedBox(width: dimensions.getScreenHeight * 0.005),
                         SizedBox(
-                          width: dimensions.getScreenWidth * 0.16,
+                          width: dimensions.getScreenWidth * 0.2,
                           height: dimensions.getScreenHeight * 0.05,
                           child: CustomSelctionContainerWidget(
                             onPressed: () {},

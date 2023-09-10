@@ -49,6 +49,7 @@ class CustomCircleIconContainer extends StatelessWidget {
             text,
             style: TextStyle(
               fontSize: dimensions.getScreenHeight * 0.015,
+              fontWeight: FontWeight.w500,
               color: textColor,
             ),
           )

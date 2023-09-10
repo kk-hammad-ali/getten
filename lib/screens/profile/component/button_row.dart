@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:getten/screens/subscription-plan/plan_supscription_screen.dart';
+import 'package:get/get.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/responsive/dimension.dart';
+import 'package:getten/utils/routes/routes_name.dart';
 import 'package:getten/widget/custom_circle_container.dart';
 
 class ButtonRow extends StatelessWidget {
@@ -11,7 +12,7 @@ class ButtonRow extends StatelessWidget {
   Widget build(BuildContext context) {
     AppDimensions dimensions = AppDimensions(context);
     return SizedBox(
-      width: dimensions.getScreenWidth * 0.85,
+      width: dimensions.getScreenWidth * 0.9,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -33,12 +34,7 @@ class ButtonRow extends StatelessWidget {
           ),
           CustomCircleIconContainer(
             onPressed: () {
-              Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: ((context) => const PlanSubcriptionScreen()),
-                ),
-              );
+              Get.toNamed(RoutesName.subcriptionScreen);
             },
             icon: Icons.payment,
             text: 'Subscription',
