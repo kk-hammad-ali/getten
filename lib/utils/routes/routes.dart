@@ -38,7 +38,7 @@ class AppRoutes {
         ),
         GetPage(
           name: RoutesName.navigatorScreen,
-          page: () => NavigatorScreen(),
+          page: () => const NavigatorScreen(),
           transition: Transition.rightToLeft,
           transitionDuration: const Duration(milliseconds: 250),
         ),
