@@ -15,6 +15,7 @@ import 'package:getten/screens/other-category/other_category_screen.dart';
 import 'package:getten/screens/plan-subscription/plan_supscription_screen.dart';
 import 'package:getten/screens/popular-category/popular_category_screen.dart';
 import 'package:getten/screens/profile/profile_screen.dart';
+import 'package:getten/screens/qr/qr_screen.dart';
 import 'package:getten/screens/settings/settings_screen.dart';
 import 'package:getten/screens/welcome/onboarding/onboarding_screen.dart';
 import 'package:getten/screens/welcome/splash/splash_screen.dart';
@@ -148,6 +149,12 @@ class AppRoutes {
         GetPage(
           name: RoutesName.subcriptionScreen,
           page: () => const PlanSubcriptionScreen(),
+          transition: Transition.rightToLeft,
+          transitionDuration: const Duration(milliseconds: 250),
+        ),
+        GetPage(
+          name: RoutesName.qrScreen,
+          page: () => const QRScreen(),
           transition: Transition.rightToLeft,
           transitionDuration: const Duration(milliseconds: 250),
         ),

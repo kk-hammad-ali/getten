@@ -1,97 +1,106 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
-import 'package:getten/state/navigator_state.dart';
+import 'package:getten/screens/home/home_screen.dart';
+import 'package:getten/screens/map/map_screen.dart';
+import 'package:getten/screens/profile/profile_screen.dart';
+import 'package:getten/screens/settings/settings_screen.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
-import 'package:getten/utils/constant/constant.dart';
-import 'package:getten/utils/responsive/dimension.dart';
+import 'package:sweet_nav_bar/sweet_nav_bar.dart';
 
-class NavigatorScreen extends StatelessWidget {
-  final navigationController = Get.put(NavigationController());
+class NavigatorScreen extends StatefulWidget {
+  const NavigatorScreen({Key? key}) : super(key: key);
 
-  NavigatorScreen({Key? key}) : super(key: key);
+  @override
+  State<NavigatorScreen> createState() => _NavigatorScreenState();
+}
+
+class _NavigatorScreenState extends State<NavigatorScreen> {
+  int selectedIndex = 0;
 
   @override
   Widget build(BuildContext context) {
-    AppDimensions dimensions = AppDimensions(context);
-    return Obx(() => Scaffold(
-          backgroundColor: Colors.white,
-          body: IndexedStack(
-            index: navigationController.selectedIndex,
-            children: [
-              for (int i = 0; i < navigatorPages.length; i++)
-                Visibility(
-                  visible: navigationController.selectedIndex == i,
-                  maintainState: true,
-                  child: navigatorPages[i],
-                ),
-            ],
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: IndexedStack(
+              index: selectedIndex,
+              children: const [
+                HomeScreen(),
+                MapScreen(),
+                ProfileScreen(),
+                ProfileScreen(),
+                SettingScreen(),
+              ],
+            ),
           ),
-          bottomNavigationBar: BottomNavigationBar(
-            backgroundColor: Colors.white,
-            type: BottomNavigationBarType.fixed,
-            elevation: 0,
-            showSelectedLabels: false,
-            showUnselectedLabels: false,
-            currentIndex: navigationController.selectedIndex,
-            selectedLabelStyle: TextStyle(
-              fontSize: dimensions.getScreenWidth * 0.045,
+        ],
+      ),
+      bottomNavigationBar: SweetNavBar(
+        currentIndex: selectedIndex,
+        paddingBackgroundColor: AppColors.primaryBGColor,
+        items: [
+          SweetNavBarItem(
+            sweetActive: const Icon(
+              Icons.home,
               color: AppColors.primaryColor,
             ),
-            unselectedLabelStyle: TextStyle(
-              fontSize: dimensions.getScreenWidth * 0.045,
-              color: AppColors.greyScale900Color,
+            sweetIcon: const Icon(
+              Icons.home_outlined,
+              color: AppColors.blackColor,
             ),
-            onTap: (index) {
-              navigationController.setIndex(index);
-            },
-            items: [
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.home,
-                  color: navigationController.selectedIndex == 0
-                      ? AppColors.primaryColor
-                      : AppColors.greyScale900Color,
-                ),
-                label: 'Home',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.map,
-                  color: navigationController.selectedIndex == 1
-                      ? AppColors.primaryColor
-                      : AppColors.greyScale900Color,
-                ),
-                label: 'Card',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.person_pin,
-                  color: navigationController.selectedIndex == 2
-                      ? AppColors.primaryColor
-                      : AppColors.greyScale900Color,
-                ),
-                label: 'Profile',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.bookmark,
-                  color: navigationController.selectedIndex == 3
-                      ? AppColors.primaryColor
-                      : AppColors.greyScale900Color,
-                ),
-                label: 'Saved',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.menu,
-                  color: navigationController.selectedIndex == 4
-                      ? AppColors.primaryColor
-                      : AppColors.greyScale900Color,
-                ),
-                label: 'Meni',
-              ),
-            ],
+            sweetLabel: 'Home',
           ),
-        ));
+          SweetNavBarItem(
+            sweetActive: const Icon(
+              Icons.map,
+              color: AppColors.primaryColor,
+            ),
+            sweetIcon: const Icon(
+              Icons.map_outlined,
+              color: AppColors.blackColor,
+            ),
+            sweetLabel: 'Map',
+          ),
+          SweetNavBarItem(
+            sweetActive: const Icon(
+              Icons.person_pin,
+              color: AppColors.primaryColor,
+            ),
+            sweetIcon: const Icon(
+              Icons.person_pin_circle_outlined,
+              color: AppColors.blackColor,
+            ),
+            sweetLabel: 'Profile',
+          ),
+          SweetNavBarItem(
+            sweetActive: const Icon(
+              Icons.bookmark,
+              color: AppColors.primaryColor,
+            ),
+            sweetIcon: const Icon(
+              Icons.bookmark_outline,
+              color: AppColors.blackColor,
+            ),
+            sweetLabel: 'Saved',
+          ),
+          SweetNavBarItem(
+            sweetActive: const Icon(
+              Icons.menu,
+              color: AppColors.primaryColor,
+            ),
+            sweetIcon: const Icon(
+              Icons.menu_outlined,
+              color: AppColors.blackColor,
+            ),
+            sweetLabel: 'Menu',
+          ),
+        ],
+        onTap: (index) {
+          setState(() {
+            selectedIndex = index;
+          });
+        },
+      ),
+    );
   }
 }

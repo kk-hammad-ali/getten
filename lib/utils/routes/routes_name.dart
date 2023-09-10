@@ -25,7 +25,8 @@ class RoutesName {
   static const String businessScreen = "/business-screen";
   static const String detailsScreen = "/details-screen";
 
+  // Other
   static const String filtersScreen = "/filter-screen";
   static const String subcriptionScreen = "/subcription-screen";
+  static const String qrScreen = "/qr-screen";
 }
-  // Other

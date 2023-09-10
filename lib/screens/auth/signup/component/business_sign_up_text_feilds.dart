@@ -58,6 +58,36 @@ class _BusinessTextFeildsState extends State<BusinessTextFeilds> {
           controller: _websiteController,
         ),
         SizedBox(height: dimensions.getScreenHeight * 0.03),
+        const CustomSmallHeading(text: 'Country'),
+        CustomDropDownWidget(
+          initialValue: "Afghanistan",
+          list: countries,
+        ),
+        SizedBox(height: dimensions.getScreenHeight * 0.03),
+        const CustomSmallHeading(text: 'State'),
+        CustomTextFieldWidget(
+          onEditingComplete: () {},
+          validations: (value) {
+            return null;
+          },
+          hintText: 'Enter your state',
+          inputType: TextInputType.name,
+          inputAction: TextInputAction.next,
+          controller: _addressController,
+        ),
+        SizedBox(height: dimensions.getScreenHeight * 0.03),
+        const CustomSmallHeading(text: 'City'),
+        CustomTextFieldWidget(
+          onEditingComplete: () {},
+          validations: (value) {
+            return null;
+          },
+          hintText: 'Enter your business city',
+          inputType: TextInputType.name,
+          inputAction: TextInputAction.next,
+          controller: _addressController,
+        ),
+        SizedBox(height: dimensions.getScreenHeight * 0.03),
         const CustomSmallHeading(text: 'Address'),
         CustomTextFieldWidget(
           onEditingComplete: () {},
@@ -68,12 +98,6 @@ class _BusinessTextFeildsState extends State<BusinessTextFeilds> {
           inputType: TextInputType.name,
           inputAction: TextInputAction.next,
           controller: _addressController,
-        ),
-        SizedBox(height: dimensions.getScreenHeight * 0.03),
-        const CustomSmallHeading(text: 'Country'),
-        CustomDropDownWidget(
-          initialValue: "Afghanistan",
-          list: countries,
         ),
         SizedBox(height: dimensions.getScreenHeight * 0.03),
         const CustomSmallHeading(text: 'Email Address'),

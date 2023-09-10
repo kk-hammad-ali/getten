@@ -32,7 +32,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
-      // home: const SplashScreen(),
+      // home: const NavigatorScreen(),
       initialRoute: RoutesName.splashScreen,
       getPages: AppRoutes.appRoutes(),
     );
