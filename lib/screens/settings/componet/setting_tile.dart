@@ -121,7 +121,7 @@ final businessSettings = [
 
 final communitySettings = [
   {
-    'text': 'Yelp Elite Squad',
+    'text': 'Getten Elite Squad',
     'icon': const Icon(
       Icons.business,
       color: AppColors.primaryColor,

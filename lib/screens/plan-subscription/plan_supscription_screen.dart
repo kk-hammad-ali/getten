@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:getten/screens/subscription-plan/component/body.dart';
+import 'package:getten/screens/plan-subscription/component/body.dart';
 import 'package:getten/widget/custom_appbar_widget.dart';
 
 class PlanSubcriptionScreen extends StatelessWidget {

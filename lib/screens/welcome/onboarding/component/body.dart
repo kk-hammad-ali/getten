@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:getten/screens/auth/signin/signin_screen.dart';
 import 'package:getten/screens/welcome/onboarding/component/cicrcle_progress_bar.dart';
 import 'package:getten/screens/welcome/onboarding/component/onboarding_widget.dart';
 import 'package:getten/state/onboarding_state.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/models/onbarding/data.dart';
 import 'package:getten/utils/responsive/dimension.dart';
+import 'package:getten/utils/routes/routes_name.dart';
 
 class BodyOnboardingScreen extends StatelessWidget {
   final onboardingController = Get.put(OnboardingController());
@@ -47,12 +47,7 @@ class BodyOnboardingScreen extends StatelessWidget {
                   : const SizedBox(),
               TextButton(
                 onPressed: () {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const SignInScreen(),
-                    ), //MaterialPageRoute
-                  );
+                  Get.offNamed(RoutesName.signInScreen);
                 },
                 child: Text(
                   'Skip',
@@ -127,13 +122,7 @@ class BodyOnboardingScreen extends StatelessWidget {
                                   curve: Curves.ease,
                                 )
                               : () {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(
-                                      builder: (context) =>
-                                          const SignInScreen(),
-                                    ), //MaterialPageRoute
-                                  );
+                                  Get.offNamed(RoutesName.signInScreen);
                                 };
                         },
                         icon: const Icon(
