@@ -2,7 +2,7 @@ import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:get/get.dart';
-import 'package:getten/screens/auth/signup/component/create_tabs.dart';
+import 'package:getten/screens/auth/signup/component/sign_up_text_feilds.dart';
 import 'package:getten/utils/assets/colors/colors.dart';
 import 'package:getten/utils/assets/images/images.dart';
 import 'package:getten/utils/responsive/dimension.dart';
@@ -57,7 +57,7 @@ class BodySignUpScreen extends StatelessWidget {
                 ),
               ),
               SizedBox(height: dimensions.getScreenHeight * 0.05),
-              CreateCustomerorBusinessTab(),
+              const SignUpTextFeilds(),
               SizedBox(height: dimensions.getScreenHeight * 0.01),
               CustomLowerColumnWidget(
                 recognizer: TapGestureRecognizer()

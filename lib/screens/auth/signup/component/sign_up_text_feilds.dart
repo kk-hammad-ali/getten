@@ -6,20 +6,21 @@ import 'package:getten/widget/custom_small_heading_widget.dart';
 import 'package:getten/widget/custom_text_field_widget.dart';
 import 'package:getten/widget/password_textfields_widget.dart';
 
-class CustomerTextFeilds extends StatefulWidget {
-  const CustomerTextFeilds({super.key});
+class SignUpTextFeilds extends StatefulWidget {
+  const SignUpTextFeilds({super.key});
 
   @override
-  State<CustomerTextFeilds> createState() => _CustomerTextFeildsState();
+  State<SignUpTextFeilds> createState() => _SignUpTextFeildsState();
 }
 
-class _CustomerTextFeildsState extends State<CustomerTextFeilds> {
+class _SignUpTextFeildsState extends State<SignUpTextFeilds> {
   final TextEditingController _passwordController = TextEditingController();
   final TextEditingController _nameController = TextEditingController();
   final TextEditingController _phoneController = TextEditingController();
   final TextEditingController _confrimPasswordController =
       TextEditingController();
   final TextEditingController _emailController = TextEditingController();
+
   @override
   Widget build(BuildContext context) {
     AppDimensions dimensions = AppDimensions(context);
@@ -93,7 +94,7 @@ class _CustomerTextFeildsState extends State<CustomerTextFeilds> {
           backgroundColor: AppColors.primaryColor,
           textColor: AppColors.whiteColor,
           onPressed: () {},
-        ),
+        )
       ],
     );
   }

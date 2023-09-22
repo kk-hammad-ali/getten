@@ -222,3 +222,5 @@ final List<Widget> navigatorPages = [
   const ProfileScreen(),
   const SettingScreen(),
 ];
+
+const baseApi = "https://getten.citycloudschool.co.ke/api_docs/apis/";

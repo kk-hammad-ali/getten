@@ -33,7 +33,7 @@ class MyApp extends StatelessWidget {
         textTheme: GoogleFonts.poppinsTextTheme(),
       ),
       // home: const NavigatorScreen(),
-      initialRoute: RoutesName.splashScreen,
+      initialRoute: RoutesName.signInScreen,
       getPages: AppRoutes.appRoutes(),
     );
   }
